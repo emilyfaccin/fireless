@@ -1,0 +1,2 @@
+class FireReport < ApplicationRecord
+end

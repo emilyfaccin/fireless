@@ -15,7 +15,7 @@ services:
     volumes:
       - .:/var/www/fireless
     ports:
-      - '4000:3000'
+      - '80:3000'
     environment:
       - POSTGRES_HOST=db
       - POSTGRES_USER=postgres
