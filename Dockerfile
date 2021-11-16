@@ -19,4 +19,9 @@ RUN bundle install
 # copia o projeto para o container
 COPY . /var/www/fireless/
 
+# concede permissao de execucao e define o arquivo entrypoint
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+
 CMD ["rails", "server", "-b", "0.0.0.0"]
