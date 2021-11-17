@@ -1,8 +1,9 @@
 class FireReportsController < ApplicationController
   def index
-    @fire_reports = FireReport.to_present.order(created_at: :desc)
+    @totals = FireReport.select(:size).group(:size).count
+    @fire_reports = FireReport.to_present.order(created_at: :desc).to_a
 
-    render json: @fire_reports
+    render json: @fire_reports.unshift(@totals)
   end
 
   def create
