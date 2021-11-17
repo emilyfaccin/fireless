@@ -1,24 +1,16 @@
-# README
+## FIRELESS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bem vindo(a) ao sistema de reportes de incêndio.
 
-Things you may want to cover:
+### Stack
+- Ruby on Rails (API)
+- Dart
+- Flutter
+- PostgreSQL
 
-* Ruby version
+### Instalação e uso
+Para subir o serviço Rails, é necessário possuir o
+docker e docker compose instalados.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Satisfeitas as dependências, basta clonar o projeto,
+entrar no diretório e rodar `docker-compose up` em seu terminal.
