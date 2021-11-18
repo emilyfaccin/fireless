@@ -17,6 +17,7 @@ class FireReportsController < ApplicationController
   private
 
   def fire_report_params
-    params.require(:fire_report).permit(:street, :district, :size)
+    params.require(:fire_report)
+          .permit(:street, :district, :size, :reporter, :phone)
   end
 end
