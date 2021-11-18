@@ -2,8 +2,9 @@ class FireReportsController < ApplicationController
   def index
     @totals = FireReport.select(:size).group(:size).count
     @fire_reports = FireReport.to_present.order(created_at: :desc).to_a
+    @result = FireReportFormatter.call(@totals, @fire_reports)
 
-    render json: @fire_reports.unshift(@totals)
+    render json: @result
   end
 
   def create
