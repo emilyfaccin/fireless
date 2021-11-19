@@ -12,10 +12,12 @@ class FireReportFormatter
 
   def call
     {
-      small: totals.fetch("pequeno", 0),
-      medium: totals.fetch("medio", 0),
-      big: totals.fetch("grande", 0),
-      totals: totals.values.sum,
+      totais: {
+        small: totals.fetch("pequeno", 0),
+        medium: totals.fetch("medio", 0),
+        big: totals.fetch("grande", 0),
+        totals: totals.values.sum
+      },
       reports: collection
     }
   end
